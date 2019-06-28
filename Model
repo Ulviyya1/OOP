@@ -1,0 +1,18 @@
+public class Model {
+	
+	public static String Name;
+	public int Age;
+	public String Country;
+	public String University = "WSB University";
+	public double Weight;
+	public int Height;
+	
+	public void getModel() {
+		System.out.println("Let's choose ");
+	}
+	
+	public void getOther() {
+		System.out.println("Second model: ");
+	}
+
+}
