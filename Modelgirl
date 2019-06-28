@@ -1,0 +1,58 @@
+//import java.util.Scanner;
+public class Modelgirl extends Model{ //private static Scanner input;
+
+//inheritance
+	public void getModel() { //polymorphism
+		System.out.println("Model info:");
+	}
+	
+	public static void main(String[] args) {
+		//input = new Scanner(System.in);
+	Modelgirl girl = new Modelgirl(); //this is object
+	
+	Model model0 = new Model();
+	 Model.Name = "Sai";
+	model0.Age = 21;
+	model0.Country = "Thailand";
+	model0.Height =  155;
+	model0.Weight = 47.6;
+	model0.University = "WSB University";
+	model0.getModel();
+	System.out.println("Her name is " + Model.Name + " .She is " + model0.Age + " years old. And she study at " + 
+	model0.University + ". " +Model.Name + " " + " came from " + model0.Country);
+	
+	Model model1 = new Model();
+	Model.Name="Aydan";
+	model1.Age = 22;
+	model1.Country = "Azerbaijan";
+	model1.Height = 168;
+	model1.Weight = 49.5;
+	model1.University = "WSB University";
+	girl.getModel(); //Here i use polymorphism with mo object
+	System.out.println("Her name is " + Model.Name + " .She is " + model1.Age + " years old. And she study at " + 
+			model1.University + ". " +Model.Name + " " + " came from " + model1.Country);
+	
+	Model model2 = new Model();
+	Model.Name="Dilan";
+	model2.Age = 27;
+	model2.Country = "Turkey";
+	model2.Height = 170;
+	model2.Weight = 60.5;
+	model2.University = "WSB University";
+	System.out.println("Now 3rd model ");
+	
+	System.out.println("Her name is " + Model.Name + " .She is " + model2.Age + " years old. And she studies at " + 
+			model2.University + ". " +Model.Name + " " + " came from " + model2.Country);
+	
+	//Mainpage ma= new Mainpage();
+	
+	//System.out.println("Your salary " + ma.getSalary());
+	//System.out.println("Why 0? ");
+	//String X = input.nextLine();
+	//ma.notexp(X);
+	
+	
+	
+
+}
+}
