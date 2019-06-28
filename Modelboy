@@ -1,0 +1,32 @@
+public class Modelboy extends Model{
+public void getModel() {  //polymorphism
+	System.out.println("From different counties volunteer boy models");
+}
+	public static void main(String[] args) {
+		
+		Modelboy boy = new Modelboy(); //creating object
+		
+		
+		Model mod1 = new Model(); //inheritance
+		Model.Name = "Ziya";
+		mod1.Age = 23;
+		mod1.Country = "Azerbaijan";
+		mod1.Height = 170;
+		mod1.Weight = 65.5;
+		
+		
+		mod1.getModel();
+		boy.getModel();
+		System.out.println("First model: ");
+		System.out.println("His name is " + Model.Name + " .He is " + mod1.Age + " years old. And he studies at " + 
+				mod1.University + ". " +Model.Name + " " + " came from " + mod1.Country);
+		
+		
+		
+		Model mod0 = new Model();
+		Model.Name = "Jim";
+		mod0.Age = 24;
+		mod0.Country = "Albania";
+		mod0.Height = 175;
+		
+		mod0.Weight = 70.2;
