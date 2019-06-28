@@ -1,0 +1,161 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Runproject //extends Mainpage
+{
+	public void callAll(Model y) {
+		y.getModel();
+	}
+	private static Scanner input;
+
+
+public static void main(String[] args) {
+	input = new Scanner(System.in);
+	Runproject pro = new Runproject();
+	Model mi = new Model();
+	Mainpage main = new Mainpage();
+	//Modelgirl g = new Modelgirl();
+	
+	
+		String[] Place = new String[23];
+		Place[0] = "Silesia Park";
+		Place[1] = "Pogoria lake";
+		Place[2] = "Mars colony";
+		Place[3] = "Zakopane";
+		Place[4] = "Zalipie";
+		Place[5] = "Art museum";
+		Place[6] = "Torun";
+		Place[7] = "The Polish National Radio Symphony Orchestra";
+		Place[8] = "Dabrowa Train station";
+		Place[9] = "Gliwice Train station";
+		Place[10] = "Baku";
+		Place[11] = "Prague";		
+		Place[12] = "Palmenhaus";
+		Place[13] = "Wroclaw center";
+		Place[14] = "Kranj";
+		Place[15] = "Tatra mountain";
+		Place[16] = "Lake Bled";
+		Place[17] = "Venice";
+		Place[18] = "Silesian Museum";
+		Place[19] = "Dolina Trzech Stawow";
+		Place[20] = "Nikiszowiec";
+		Place[21] = "Ljubljana";
+		Place[22] = "Roman Catholic Basilica Panewniki";
+		
+
+		Random randomplace1 = new Random();
+		int randomNum1 = randomplace1.nextInt(Place.length); 
+		//System.out.println("Imagine we are in  " + Place[randomNum1]);
+		
+		String[] pose = new String[17];
+		pose[0] = "stay strict";
+		pose[1] = "do not smile! For 5 min do not smile.";
+		pose[2] = "think about your future, show that in your eyes";
+		pose[3] = "think about Orlando Bloom, he is here, next to you";
+		pose[4] = "think about global warming";
+		pose[5] = "think about alliens";
+		pose[6] = "imagine that aliens are stealing you";
+		pose[7] = "close eyes and imagine dancing like under rain";
+		pose[8] = "jump";
+		pose[9] = "think about your boyfriend/ girlfriend";
+		pose[10] = "imagine you are killing that one you hate";
+		pose[11] = "remember who is Stephen Hawking?";
+		pose[12] = "dance salsa";
+		pose[13] = "pretend like that you are the most clever person in the world :)";
+		pose[14] = "answer : do you like exams?";
+		pose[15] = "Rose in Titanic";
+		pose[16] = "dance like ballerina";
+		
+		Random randomplace4 = new Random();
+		int randomNum4 = randomplace4.nextInt(pose.length); 
+		
+		//System.out.print("now please try " + pose[randomNum4]);
+		
+		
+		String[] items = new String[17];
+		items[0] = "Sunglases";
+		items[1] = "Umbrella";
+		items[2] = "scarf";
+		items[3] = "hat";
+		items[4] = "book";
+		items[5] = "Bike";
+		items[6] = "Ball";
+		items[7] = "Flower";
+		items[8] = "badminton";
+		items[9] = "Bottle";
+		items[10] = "guitar";
+		items[11] = "headband";
+		items[12] = "flag";
+		items[13] = "Highheels";
+		items[14] = "Snickers";
+		items[15] = "torn socks";
+		items[16] ="barefoot";
+		Random randomplace2 = new Random();
+		int randomNum2 = randomplace2.nextInt(items.length); 
+		
+		//System.out.print(" and we have  " + items[randomNum2]); 
+		
+		
+		String[] mood = new String[6];
+		mood[0] = "excited";
+		mood[1] = "frustrated";
+		mood[2] = "enraged";
+		mood[3] = "Donald Trump";
+		mood[4] = "club mood";
+		mood[5] = "in romantic";
+		Random randomplace5 = new Random();
+		int randomNum5 = randomplace5.nextInt(mood.length); 
+		
+		//System.out.println(" and pretend like " + mood[randomNum5]);
+		
+		String[] clothes = new String[15];
+		clothes[0] = "Black long tulle skirt with black short t-shirt-all in black style";
+		clothes[1] = "Classic style--use more red";
+		clothes[2] = "Sport style";
+		clothes[3] = "teenarger style";
+		clothes[4] = "Vintage style";
+		clothes[5] = "Chic style";
+		clothes[6] = "Tomboy style";
+		clothes[7] = "tramp style";
+		clothes[8] = "Marilyn Monroe";
+		clothes[9] = "Artsy style";
+		clothes[10] = "Sophisticated style";
+		clothes[11] = "Bohemian style";
+		clothes[12] = "Rocker style";
+		clothes[13] = "Preppy style";
+		clothes[14] = "Harley Davidson style";
+		
+		
+		
+		Random randomplace3 = new Random();
+		int randomNum3 = randomplace3.nextInt(clothes.length); 
+		
+		//System.out.println(" in " + clothes[randomNum3] );
+		
+		System.out.print("Imagine we are in  " + Place[randomNum1] + " and we have  " + items[randomNum2] + " in " + clothes[randomNum3] + 
+
+				'\n' +	"Now please try " + pose[randomNum4] + " and pretend like " + mood[randomNum5]);
+		
+		
+		
+		
+		
+		Model mods[] = new Model[2];
+		
+		System.out.println('\n' + "Your salary " + main.getSalary());
+		System.out.println('\n' + "Why 0? ");
+		String X = input.nextLine();
+		main.notexp(X);
+		
+		//polymorphism array
+		mods[0]= new Modelgirl();
+		
+		mods[1]= new Modelboy();
+		for (int x=0;x<2;++x) {
+			mods[x].getModel();
+		}
+		
+		//mi.getModel();
+		pro.callAll(mi);
+}
+
+}
